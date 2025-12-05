@@ -1,8 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Discussion Topic Selector
+
+An interactive Next.js application built with React and Material UI that allows users to select discussion topics, choose titles, and configure text length preferences.
+
+## Features
+
+- **Topic Selection**: Choose from 6 different topics (Fun, Education, Sports, News, Investment, Facts)
+- **Title Selection with Search**: Searchable dropdown menu with custom title support
+- **Text Length Slider**: Configure discussion length from 100 to 1000 words
+- **Responsive Design**: Optimized for mobile (375px), tablet (745px), and desktop (1440px, 1728px)
+- **Smooth Animations**: Fade and grow transitions for enhanced user experience
+- **Material UI Components**: Modern, accessible UI components
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (version 18 or higher)
+- npm, yarn, pnpm, or bun package manager
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd media-management
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### 3. Set Up Environment Variables
+
+Copy the `.env.example` file to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Edit the `.env` file and add your environment variables (if needed for future API integration).
+
+### 4. Run the Development Server
 
 ```bash
 npm run dev
@@ -14,23 +61,93 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+media-management/
+├── app/
+│   ├── data.ts          # Topic and title data structure
+│   ├── layout.tsx       # Root layout with Material UI theme
+│   ├── page.tsx         # Main form component
+│   ├── theme.ts         # Material UI theme configuration
+│   └── globals.css      # Global styles
+├── public/              # Static assets
+├── .env.example         # Example environment variables
+├── package.json         # Project dependencies
+└── README.md           # This file
+```
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. **Select a Topic**: Click on one of the topic tiles (Fun, Education, Sports, News, Investment, or Facts)
+2. **Choose a Title**: Use the searchable dropdown to select or search for a discussion title
+3. **Set Text Length**: Adjust the slider to set your desired word count (100-1000 words)
+4. **Submit**: Click the submit button to confirm your preferences
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Available Topics and Titles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Fun
+- Board games revival, Comedy trends, Amusement parks, Escape rooms, Street performances, Online challenges, Festivals impact, Crafting movement, Social gaming, Virtual reality
 
-## Deploy on Vercel
+### Education
+- Gamified learning, Education systems, Bilingual benefits, Standardized testing, Arts in schools, Tech bootcamps, Homeschooling dynamics, Mentorship importance, Educational equity, Mobile learning
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Sports
+- Sports medicine, Team sociology, Olympic economics, Gender parity, Fandom psychology, Extreme sports, Sports business, Youth athletics, Data analytics, Doping ethics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### News
+- Citizen journalism, Whistleblower influence, Fake news, Print media survival, Social media news, Cybersecurity news, Democratic media, News deserts, News economics, Broadcast evolution
+
+### Investment
+- Robo-advising, Geopolitical impacts, Index funds, Real estate trends, Startup investing, Social trading, Tax strategies, Emerging markets, Financial literacy, Pension futures
+
+### Facts
+- Animal oddities, Everyday science, Historical obscurities, Science myths, Human body facts, Oceanic discoveries, Space exploration, Ancient tech, World laws, Bizarre news
+
+## Responsive Breakpoints
+
+- **Mobile**: 375px
+- **Tablet**: 745px
+- **Desktop (Default)**: 1440px
+- **Large Desktop**: 1728px
+
+## Technologies Used
+
+- **Next.js 16**: React framework for production
+- **React 19**: UI library
+- **Material UI (MUI) 7**: Component library
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+
+## Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Future Enhancements
+
+- Backend API integration for storing user preferences
+- User authentication
+- Discussion history
+- Export/import preferences
+- Advanced filtering options
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is private and proprietary.
+
+## Support
+
+For support, please contact the development team.
